@@ -1,0 +1,20 @@
+#app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+}
+
+#appHeader{
+    height: 7%;
+}
+
+#appContent{
+    text-align: center;
+    color: white;
+    opacity: 0.95;
+    background-color: #040820a6;
+    height: calc(90% - 4px);
+    display: flex;
+}

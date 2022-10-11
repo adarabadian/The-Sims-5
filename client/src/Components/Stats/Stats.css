@@ -1,0 +1,20 @@
+table{
+	position: absolute;
+	bottom: 0;
+	width: 50%;
+}
+
+tbody > tr > td > *{
+	margin: auto;
+	text-align: center;
+}
+
+
+.progress {
+	width: 100%;
+}
+
+td {
+	width: 25%;
+	text-align: center;
+}
