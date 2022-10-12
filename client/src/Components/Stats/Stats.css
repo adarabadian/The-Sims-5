@@ -1,14 +1,16 @@
-table{
-	position: absolute;
-	bottom: 0;
-	width: 50%;
-}
-
-tbody > tr > td > *{
+tbody > tr > td > *, h1{
 	margin: auto;
 	text-align: center;
+	margin: 7px;
+}
+table{
+	width: 95%;
+	margin-bottom: 20px;
 }
 
+h1{
+	margin-top: 20px;
+}
 
 .progress {
 	width: 100%;

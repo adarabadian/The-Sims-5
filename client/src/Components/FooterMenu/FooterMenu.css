@@ -1,0 +1,22 @@
+.footerMenu{
+	display: flex;
+}
+
+.footerMenu > *{
+	width: 50%;
+}
+
+.nav-item {
+	/* background-color: white;
+	border-radius: 20px; */
+}
+
+.nav-item > .nav-link{
+	text-align: center;
+	color: white;
+}
+
+.nav-item > a:hover {
+	text-align: center;
+	color: white;
+}

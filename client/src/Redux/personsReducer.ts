@@ -1,41 +1,56 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import axios from 'axios';
-import { toast } from 'react-toastify';
+// import axios from 'axios';
+// import { toast } from 'react-toastify';
 import { Person } from '../Models/Person';
 import { Stats } from '../Models/Stats';
 import { RootState} from './store'
 
-interface PersonState {
-    person : Person
+interface PersonsState {
+    // person : Person
+	persons: Array<Person>
 }
 
 // Define the initial state using that type
-const initialState : PersonState = {
-	person : new Person()
+const initialState : PersonsState = {
+	// person : new Person(),
+	persons: [new Person()]
 }
 
-export const personSlice = createSlice({
-    name: 'person',
+function getActivePersonIndex (state : PersonsState){
+	return state.persons.map(person => person.isActive).indexOf(true);
+}
+
+export const personsSlice = createSlice({
+    name: 'persons',
     initialState,
     reducers: {
         setPersonStat: (state, action) => {
         	let statToSet = action.payload[0];
         	let precentage = action.payload[1];
-			let personCopy = {...state.person}
+			let personIndex = getActivePersonIndex(state)
+			let personCopy = {...state.persons[personIndex]};
 			personCopy.stats[statToSet as keyof Stats]  = precentage;
-			state.person = personCopy;
+			state.persons[personIndex] = personCopy;
 		},
 
 		decreasePersonStats: (state, action) =>{
-			let personCopy = {...state.person};
+			let personIndex = getActivePersonIndex(state)
+			let personCopy = {...state.persons[personIndex]};
+
 			personCopy.stats.hunger  	= Number((personCopy.stats.hunger  - 0.2).toFixed(2));
 			personCopy.stats.social  	= Number((personCopy.stats.social  - 0.1).toFixed(2));
 			personCopy.stats.energy  	= Number((personCopy.stats.energy  - 0.1).toFixed(2));
 			personCopy.stats.fun 	 	= Number((personCopy.stats.fun	   - 0.2).toFixed(2));
 			personCopy.stats.hygene  	= Number((personCopy.stats.hygene  - 0.15).toFixed(2));
 			personCopy.stats.bladder 	= Number((personCopy.stats.bladder - 0.2).toFixed(2));
-			state.person = personCopy;
+			
+			state.persons[personIndex] = personCopy;
+		},
+
+		getActivePerson: (state, action) =>{
+			state.persons.map(person => person.isActive).indexOf(true)
 		}
+
         // setGameData: (state, action) => {
         //     const index = state.gamesArray.findIndex(game => 
         //         action.payload.id == game.id
@@ -51,6 +66,6 @@ export const personSlice = createSlice({
     }
 })
 
-export const {setPersonStat, decreasePersonStats} = personSlice.actions
-export const selectPerson = (state: RootState) => state.personState
-export default personSlice.reducer
+export const {setPersonStat, decreasePersonStats, getActivePerson} = personsSlice.actions
+export const selectPersons = (state: RootState) => state.personsState.persons
+export default personsSlice.reducer

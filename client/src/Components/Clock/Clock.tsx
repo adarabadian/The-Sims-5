@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../Redux/hooks";
 import { RootState } from "../../Redux/store";
 import { runClock } from "../../Redux/gameReducer";
-import { decreasePersonStats } from "../../Redux/personReducer";
+import { decreasePersonStats } from "../../Redux/personsReducer";
 
 export default function Clock() {
 	const dispatch = useAppDispatch();

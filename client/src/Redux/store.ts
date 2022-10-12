@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import gameReducer from "./gameReducer";
-import personReducer from "./personReducer";
+import personsReducer from "./personsReducer";
 // import currenciesReducer from "./currenciesReducer";
 // import gamesReducer from "./gamesReducer";
 // import userDetailsReducer from "./userDetailsReducer";
@@ -10,7 +10,7 @@ export const store = configureStore({
         // currenciesState :  currenciesReducer,
         // userState       :  userDetailsReducer,
         // gamesState      :  gamesReducer,
-        personState      :  personReducer,
+        personsState      :  personsReducer,
         gameState      :  gameReducer,
     }, 	
 		middleware: (getDefaultMiddleware) =>

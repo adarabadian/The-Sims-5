@@ -6,15 +6,18 @@
     background-position: center;
 }
 
-#appHeader{
+header{
     height: 7%;
 }
 
-#appContent{
+.house{
     text-align: center;
     color: white;
     opacity: 0.95;
-    background-color: #040820a6;
-    height: calc(90% - 4px);
+    background-color: #042006a6;
+    height: 68%;
     display: flex;
+}
+.footer{
+	height: 25%;
 }

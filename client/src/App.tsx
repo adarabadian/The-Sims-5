@@ -1,10 +1,11 @@
 import "./App.css";
 import React from "react";
-import MainPage from "./Components/MainPage/MainPage";
+import MainPage from "./Components/House/House";
 import Header from "./Components/Header/Header";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./Components/Footer/Footer";
 
 export function App() {
     return (
@@ -20,13 +21,15 @@ export function App() {
                 draggable
                 pauseOnHover
             />
+			
             <Header />
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/home" element={<MainPage />} />
-                    <Route path="/" element={<Navigate to="/home" replace />} />
-                </Routes>
-            </BrowserRouter>
+            	<BrowserRouter>
+            	    <Routes>
+            	        <Route path="/home" element={<MainPage />} />
+            	        <Route path="/" element={<Navigate to="/home" replace />} />
+            	    </Routes>
+            	</BrowserRouter>
+			<Footer />
         </div>
     );
 }
