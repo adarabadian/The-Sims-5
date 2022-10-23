@@ -8,9 +8,7 @@ export const useMousePosition = () => {
     window.addEventListener("mousemove", setFromEvent);
 
     return () => {
-		console.log('aaa');
-		
-      window.removeEventListener("mousemove", setFromEvent);
+    	window.removeEventListener("mousemove", setFromEvent);
     };
   }, []);
 

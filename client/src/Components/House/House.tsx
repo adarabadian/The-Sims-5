@@ -11,7 +11,7 @@ export default function House() {
 	function handleClick(e : any){
 		let coordinates = getCleanCoordinates(e, img, position);
 		
-		console.log(img);
+		console.log(coordinates);
 		
 	}
 
@@ -31,7 +31,7 @@ export default function House() {
 		// HOUSE LINK https://planner5d.com/v?key=9412f97df46b4e6364a5ba74345aa43b&viewMode=2d
 		// HOUSE LINK https://planner5d.com/v?key=9412f97df46b4e6364a5ba74345aa43b&viewMode=2d
 		<div className="house">
-			<img src={houseImage} alt="" ref={img} onClick={handleClick} />
+			{/* <img src={houseImage} alt="" ref={img} onClick={handleClick} /> */}
 		</div>
 	);
 }

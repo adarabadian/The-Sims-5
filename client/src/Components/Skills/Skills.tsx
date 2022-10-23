@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import ProgressBar from "react-bootstrap/esm/ProgressBar";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../Redux/hooks";
-import { setPersonStat } from "../../Redux/personsReducer";
 import { RootState } from "../../Redux/store";
 
 export default function Skills() {
@@ -48,9 +46,9 @@ export default function Skills() {
 					</tr>
 					<tr>
 						<td>
-							<label>🎨 Drawing 🎨</label>
+							<label>🎨 Arts 🎨</label>
 						</td>
-						<td>{getSlider(person.skills.drawing)}</td>
+						<td>{getSlider(person.skills.arts)}</td>
 						<td>
 							<label>🏃‍♂️ Fitness 🏃‍♂️</label>
 						</td>
@@ -62,10 +60,10 @@ export default function Skills() {
 						</td>
 						<td>{getSlider(person.skills.logic)}</td>
 
-						<td>
+						{/* <td>
 							<label>🎸 Playing 🎸</label>
 						</td>
-						<td>{getSlider(person.skills.playing)}</td>
+						<td>{getSlider(person.skills.playing)}</td> */}
 					</tr>
 				</tbody>
 			</table>

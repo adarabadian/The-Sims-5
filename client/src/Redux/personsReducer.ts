@@ -37,12 +37,12 @@ export const personsSlice = createSlice({
 			let personIndex = getActivePersonIndex(state)
 			let personCopy = {...state.persons[personIndex]};
 
-			personCopy.stats.hunger  	= Number((personCopy.stats.hunger  - 0.2).toFixed(2));
-			personCopy.stats.social  	= Number((personCopy.stats.social  - 0.1).toFixed(2));
-			personCopy.stats.energy  	= Number((personCopy.stats.energy  - 0.1).toFixed(2));
-			personCopy.stats.fun 	 	= Number((personCopy.stats.fun	   - 0.2).toFixed(2));
-			personCopy.stats.hygene  	= Number((personCopy.stats.hygene  - 0.15).toFixed(2));
-			personCopy.stats.bladder 	= Number((personCopy.stats.bladder - 0.2).toFixed(2));
+			personCopy.stats.hunger  	= Number((personCopy.stats.hunger  - 0.12).toFixed(2));
+			personCopy.stats.social  	= Number((personCopy.stats.social  - 0.11).toFixed(2));
+			personCopy.stats.energy  	= Number((personCopy.stats.energy  - 0.08).toFixed(2));
+			personCopy.stats.fun 	 	= Number((personCopy.stats.fun	   - 0.15).toFixed(2));
+			personCopy.stats.hygene  	= Number((personCopy.stats.hygene  - 0.14).toFixed(2));
+			personCopy.stats.bladder 	= Number((personCopy.stats.bladder - 0.13).toFixed(2));
 			
 			state.persons[personIndex] = personCopy;
 		},
