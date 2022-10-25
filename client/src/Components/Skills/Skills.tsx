@@ -38,27 +38,27 @@ export default function Skills() {
 						<td>
 							<label>🤵 Charisma 🤵</label>
 						</td>
-						<td>{getSlider(person.skills.charisma)}</td>
+						<td>{getSlider(person.skills.charisma.level)}</td>
 						<td>
 							<label>🍳 Cooking 🍳</label>
 						</td>
-						<td>{getSlider(person.skills.cooking)}</td>
+						<td>{getSlider(person.skills.cooking.level)}</td>
 					</tr>
 					<tr>
 						<td>
 							<label>🎨 Arts 🎨</label>
 						</td>
-						<td>{getSlider(person.skills.arts)}</td>
+						<td>{getSlider(person.skills.arts.level)}</td>
 						<td>
 							<label>🏃‍♂️ Fitness 🏃‍♂️</label>
 						</td>
-						<td>{getSlider(person.skills.fitness)}</td>
+						<td>{getSlider(person.skills.fitness.level)}</td>
 					</tr>
 					<tr>
 						<td>
 							<label>♟ Logic ♟</label>
 						</td>
-						<td>{getSlider(person.skills.logic)}</td>
+						<td>{getSlider(person.skills.logic.level)}</td>
 
 						{/* <td>
 							<label>🎸 Playing 🎸</label>

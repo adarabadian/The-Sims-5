@@ -3,27 +3,12 @@ import { useSelector } from "react-redux";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useAppDispatch } from "../../Redux/hooks";
-import { setPersonStat } from "../../Redux/personsReducer";
 import { RootState } from "../../Redux/store";
 import './Stats.css';
 
 export default function Stats() {
 	const persons = useSelector((state: RootState) => state.personsState.persons);
 	const person = persons[persons.map((p) => p.isActive).indexOf(true)];
-
-	const dispatch = useAppDispatch();
-
-	useEffect(() => {
-		// eat();
-	}, []);
-	
-	async function eat() {
-		for (let i = 0; i < 3; i++) { 
-			await new Promise((resolve) => setTimeout(resolve, 1000));
-			dispatch(setPersonStat(["hunger", person.stats.hunger + 5]));
-		}
-		console.log(person);
-	}
 
 	function getSlider(precentage : number){
 		if (precentage > 50) {

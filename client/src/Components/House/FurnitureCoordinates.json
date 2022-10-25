@@ -1,0 +1,72 @@
+[
+	{
+		"name": "Bed",
+		"yMin": 0.111,
+		"yMax": 0.382,
+		"xMin": 0.024,
+		"xMax": 0.26
+	},
+	{
+		"name": "Fridge",
+		"yMin": 0.027,
+		"yMax": 0.147,
+		"xMin": 0.648,
+		"xMax": 0.718
+	},
+	{
+		"name": "Oven",
+		"yMin": 0.029,
+		"yMax": 0.139,
+		"xMin": 0.722,
+		"xMax": 0.79
+	},
+	{
+		"name": "Computer",
+		"yMin": 0.272,
+		"yMax": 0.478,
+		"xMin": 0.427,
+		"xMax": 0.52
+	},
+	{
+		"name": "Piano",
+		"yMin": 0.528,
+		"yMax": 0.807,
+		"xMin": 0.904,
+		"xMax": 0.973
+	},
+	{
+		"name": "Guitar",
+		"yMin": 0.85,
+		"yMax": 0.944,
+		"xMin": 0.913,
+		"xMax": 0.958
+	},
+	{
+		"name": "Bath",
+		"yMin": 0.759,
+		"yMax": 0.95,
+		"xMin": 0.037,
+		"xMax": 0.226
+	},
+	{
+		"name": "Toilet",
+		"yMin": 0.502,
+		"yMax": 0.627,
+		"xMin": 0.076,
+		"xMax": 0.118
+	},
+	{
+		"name": "TV",
+		"yMin": 0.882,
+		"yMax": 0.957,
+		"xMin": 0.645,
+		"xMax": 0.848
+	},
+	{
+		"name": "Bicycle",
+		"yMin": 0.473,
+		"yMax": 0.576,
+		"xMin": 0.844,
+		"xMax": 0.943
+	}
+]
