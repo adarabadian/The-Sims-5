@@ -6,8 +6,6 @@ import Tab from "react-bootstrap/esm/Tab";
 import { useSelector } from "react-redux";
 import { Person } from "../../Models/Person";
 import { RootState } from "../../Redux/store";
-import Skills from "../Skills/Skills";
-import Stats from "../Stats/Stats";
 import "./FooterSimsPicker.css";
 
 export default function FooterSimsPicker() {

@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useAppDispatch } from "../../Redux/hooks";
 import { RootState } from "../../Redux/store";
 import './Stats.css';
 

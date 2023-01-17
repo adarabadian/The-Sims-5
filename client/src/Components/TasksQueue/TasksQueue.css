@@ -1,6 +1,10 @@
 .task {
 	-webkit-filter: brightness(100%);
 }
+.nav-item{
+	-webkit-animation: scale-up-center 0.4s ease-in-out both;
+	animation: scale-up-center 0.4s ease-in-out both;
+}
 
 .task:hover {
 	-webkit-filter: brightness(70%);
@@ -9,4 +13,28 @@
 	-o-transition: all 1s ease;
 	-ms-transition: all 1s ease;
 	transition: all 1s ease;
+}
+
+@-webkit-keyframes scale-up-center {
+	0% {
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes scale-up-center {
+	0% {
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
 }

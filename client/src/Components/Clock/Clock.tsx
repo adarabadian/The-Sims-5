@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../Redux/hooks";
 import { RootState } from "../../Redux/store";
@@ -13,10 +13,10 @@ export default function Clock() {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			dispatch(runClock(""));
-			dispatch(decreasePersonStats(''))
+			dispatch(decreasePersonStats())
 		}, 1000);
    		return () => clearInterval(interval);
-	}, []);
+	}, [dispatch]);
 
 	return (
 		<>

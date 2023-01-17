@@ -6,18 +6,17 @@ import personsReducer from "./personsReducer";
 // import userDetailsReducer from "./userDetailsReducer";
 
 export const store = configureStore({
-    reducer: {
-        // currenciesState :  currenciesReducer,
-        // userState       :  userDetailsReducer,
-        // gamesState      :  gamesReducer,
-        personsState      :  personsReducer,
-        gameState      :  gameReducer,
-    }, 	
-		middleware: (getDefaultMiddleware) =>
-    		getDefaultMiddleware({
-    			serializableCheck: false,
-    		}),
-
+	reducer: {
+		// currenciesState :  currenciesReducer,
+		// userState	   :  userDetailsReducer,
+		// gamesState	  :  gamesReducer,
+		personsState: personsReducer,
+		gameState: gameReducer,
+	},
+	middleware: (getDefaultMiddleware) =>
+		getDefaultMiddleware({
+			serializableCheck: false,
+		}),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

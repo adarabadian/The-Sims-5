@@ -1,23 +1,23 @@
-#app{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-position: center;
+#app {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-size: cover;
+	background-position: center;
 }
 
-header{
-    height: 7%;
+header {
+	height: 7%;
 }
 
-.house{
-    text-align: center;
-    color: white;
-    opacity: 0.95;
-    background-color: #042006a6;
-    height: 68%;
-    display: flex;
+.house {
+	text-align: center;
+	color: white;
+	opacity: 0.95;
+	background-color: #042006a6;
+	height: 68%;
+	display: flex;
 }
-.footer{
+.footer {
 	height: 25%;
 }

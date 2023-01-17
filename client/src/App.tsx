@@ -8,30 +8,30 @@ import "react-toastify/dist/ReactToastify.css";
 import Footer from "./Components/Footer/Footer";
 
 export function App() {
-    return (
-        <div id="app">
-            <ToastContainer
-                position="top-center"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-            />
-			
-            <Header />
-            	<BrowserRouter>
-            	    <Routes>
-            	        <Route path="/home" element={<MainPage />} />
-            	        <Route path="/" element={<Navigate to="/home" replace />} />
-            	    </Routes>
-            	</BrowserRouter>
+	return (
+		<div id="app">
+			<ToastContainer
+				position="top-center"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+			/>
+
+			<Header />
+			<BrowserRouter>
+				<Routes>
+					<Route path="/home" element={<MainPage />} />
+					<Route path="/" element={<Navigate to="/home" replace />} />
+				</Routes>
+			</BrowserRouter>
 			<Footer />
-        </div>
-    );
+		</div>
+	);
 }
 
 export default App;

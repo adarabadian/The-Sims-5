@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useAppDispatch } from "../../Redux/hooks";
 import { RootState } from "../../Redux/store";
 
 export default function Skills() {
@@ -8,8 +7,6 @@ export default function Skills() {
 		(state: RootState) => state.personsState.persons
 	);
 	const person = persons[persons.map((p) => p.isActive).indexOf(true)];
-
-	const dispatch = useAppDispatch();
 
 	useEffect(() => {
 		// eat();

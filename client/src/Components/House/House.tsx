@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React, { useRef } from "react";
 import "./House.css";
 import houseImage from "../../Assets/house.png";
 import { useMousePosition } from "../../Utils/CustomHooks";
@@ -64,16 +64,22 @@ export default function House() {
 				person.queue(() => person.sleep(dispatch));
 				break;
 
-			case "Fridge":
-				dispatch(addToTaskQueue(new Task("Eat Snack", "🍫")));
-				person.queue(() => person.eat(dispatch));
-				break;
+				case "Fridge":
+					dispatch(addToTaskQueue(new Task("Eat Snack", "🍫")));
+					person.queue(() => person.eat(dispatch));
+					break;
 
-			case "Oven":
-				dispatch(addToTaskQueue(new Task("Cook", "🍳")));
-				person.queue(() => person.cook(dispatch));
-				person.queue(() => person.eatMeal(dispatch));
-				break;
+				
+				// person.addToQueueEnd(
+				// 	new Task("Sleep", "😴", person.eat),
+				// 	dispatch
+				// );
+
+			// case "Oven":
+			// 	dispatch(addToTaskQueue(new Task("Cook", "🍳")));
+			// 	person.queue(() => person.cook(dispatch));
+			// 	person.queue(() => person.eatMeal(dispatch));
+			// 	break;
 
 			// case "Computer":
 			// 	handleComputerClick();
